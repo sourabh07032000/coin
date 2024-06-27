@@ -14,32 +14,32 @@ function App() {
       <div className=" w-[95%] flex justify-center ml-[2.5%] rounded-xl">
         <Carousel autoPlay infiniteLoop showThumbs={false}>
           <div>
-            <img className="h-[50vh]" src={i1} alt="Image 1" />
+            <img className="lg:h-[50vh] h-[30vh]" src={i1} alt="Image 1" />
           </div>
           <div>
-            <img className="h-[50vh]" src={i2} alt="Image 2" />
+            <img className="lg:h-[50vh] h-[30vh]" src={i2} alt="Image 2" />
           </div>
         </Carousel>
       </div>
-      <h1 className="text-[35px] h-[10vh] w-[95%] ml-[2.5%] flex  items-end">
+      <h1 className="lg:text-[35px] text-[20px] h-[7vh] w-[95%] ml-[2.5%] flex  items-end">
         Purchase
       </h1>
       <div className="w-[95%] ml-[2.5%] h-[30vh]  flex justify-between">
         <div className="w-[50%] flex flex-col h-[70%]  justify-center">
           <div className="flex ">
             <img
-              className="h-[10vh]"
+              className="lg:h-[10vh] h-[5vh]"
               src="https://cryptologos.cc/logos/tether-usdt-logo.png"
               alt=""
             />
             <div className="flex flex-col">
-              <h1 className="text-[30px]">USDT</h1>
-              <h1 className="text-[20px]">1USDT≈95.62Coin(Max)</h1>
+              <h1 className="lg:text-[30px] text-[20px]">USDT</h1>
+              <h1 className="lg:text-[20px] text-[15px]">1USDT≈95.62Coin(Max)</h1>
             </div>
           </div>
           <button
             type="button"
-            class=" mt-[5%] w-[50%] py-2.5 px-5 me-2 mb-2 text-2xlfont-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+            class=" mt-[5%] w-[100%] py-2.5 px-5 me-2 mb-2 text-2xlfont-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
           >
             <i class="fa fa-user-plus" aria-hidden="true"></i> Invite
           </button>
@@ -47,7 +47,7 @@ function App() {
         <div className="w-[50%] flex  justify-end h-[40%] items-center  ">
           <button
             type="button"
-            class="w-[30%] h-[60%] text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-lg px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+            class="w-[50%] h-[60%] text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-[10px] px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
           >
             Above 50.00
           </button>

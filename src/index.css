@@ -11,3 +11,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  width: 95%;
+  margin: 0 auto;
+}
+.table-wrapper {
+  width: 100%;
+}
+
+/* Footer.css */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 2.5%;
+  right: 2.5%;
+  width: 95%;
+  height: 10vh;
+  background-color: white; /* Add a background color if needed */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+/* Add padding to the body or main content container */
+.main-content {
+  padding-bottom: 10vh; /* Same height as the footer */
+}

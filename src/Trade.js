@@ -1,7 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Trade() {
+  const Navigate = useNavigate();
   const [paymentType, setPaymentType] = useState("inr");
+  const [buySell, setBuySell] = useState("buy")
+
   return (
     <div className="pb-[10vh]">
       <div className=" bg-[#3F83F7] text-white ">
@@ -35,13 +39,16 @@ function Trade() {
         <h1>DF**20 Just trade and earned 9,210.95</h1>
       </div>
       <div className="flex w-[95%] ml-[2.5%] text-[white] ">
-        <div className="text-xl w-[50%] h-[10vh] bg-[#5EBA89] flex justify-center items-center rounded-s">
+        <div style={{backgroundColor:buySell==="buy"?"#5EBA89":"gray"}} onClick={()=>setBuySell("buy")} className="text-xl w-[50%] h-[5vh]  flex justify-center items-center rounded-s">
           Buy Coin
         </div>
-        <div className="text-xl w-[50%] h-[10vh] bg-[gray] flex justify-center items-center rounded-ee">
-          Selling Coin
+        <div style={{backgroundColor:buySell==="sell"&&"red"}} onClick={()=>setBuySell("sell")} className="text-xl w-[50%] h-[5vh] bg-[gray] flex justify-center items-center rounded-ee">
+          Selling Coin 
         </div>
+      
       </div>
+{buySell==="buy"&&
+<div className="buyDiv">
       <div className="w-[95%] ml-[2.5%] flex items-center h-[10vh]">
         <h1 className="text-[30px]">Payment Type</h1>
       </div>
@@ -271,11 +278,19 @@ function Trade() {
           </div>
         </div>
         <div className="w-[95%] ml-[2.5%] flex  h-[10vh]">
-          <div className="text-xl w-[100%] h-[8vh]  flex justify-center items-center rounded border bg-[#5EBA89]">
+          <div onClick={()=>Navigate("/UsdtPayment")} className="text-xl w-[100%] h-[8vh]  flex justify-center items-center rounded border bg-[#5EBA89]">
             Confirm Buy{" "}
           </div>
         </div>
       </div>}
+
+      {buySell==="sell"&&
+<div className="sellDiv">
+  <div className="No new order yet"></div>
+  </div>}
+
+      </div>
+      }
     </div>
   );
 }
